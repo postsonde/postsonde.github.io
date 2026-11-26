@@ -3,21 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RAW INTERFACE</title>
+    <title>RAW INTERFACE // postsonde</title>
     <style>
         body {
-            background-color: #282a36; /* Dracula Dark */
-            color: #f8f8f2;            /* Dracula White */
+            background-color: #282a36; /* Dracula Background */
+            color: #f8f8f2;            /* Dracula Foreground */
             font-family: 'Courier New', Courier, monospace;
-            padding: 40px;
-            max-width: 650px;
+            padding: 40px 20px;
+            max-width: 780px;
             margin: 0 auto;
             line-height: 1.6;
         }
-        h1 { color: #ff79c6; }        /* Dracula Pink */
-        h3 { color: #8be9fd; }        /* Dracula Cyan */
-        a { color: #bd93f9; text-decoration: none; } /* Dracula Purple */
-        a:hover { text-decoration: underline; }
+        h1 { color: #ff79c6; margin-bottom: 5px; } /* Dracula Pink */
+        h3 { color: #8be9fd; margin-top: 30px; border-bottom: 1px dashed #6272a4; padding-bottom: 5px; } /* Dracula Cyan */
+        a { color: #bd93f9; text-decoration: none; font-weight: bold; } /* Dracula Purple */
+        a:hover { color: #ff79c6; text-decoration: underline; }
+        hr { border: none; border-top: 1px solid #ff79c6; margin: 20px 0; }
+        .subtitle { color: #8be9fd; margin-top: 0; font-weight: bold; }
+        .item { margin-bottom: 18px; padding-left: 10px; border-left: 2px solid #44475a; }
+        .item:hover { border-left-color: #ff79c6; }
+        .desc { color: #f8f8f2; font-size: 0.92em; margin: 4px 0; }
+        .cmd {
+            display: inline-block;
+            background-color: #1e1f29;
+            color: #50fa7b; /* Dracula Green */
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.85em;
+            border: 1px solid #44475a;
+        }
+        .badge {
+            display: inline-block;
+            font-size: 0.75em;
+            padding: 1px 6px;
+            border-radius: 3px;
+            background-color: #44475a;
+            color: #ffb86c; /* Dracula Orange */
+            margin-left: 6px;
+            vertical-align: middle;
+        }
         .blink { animation: blinker 1.5s linear infinite; }
         @keyframes blinker { 50% { opacity: 0; } }
     </style>
@@ -25,20 +49,84 @@
 <body>
 
     <h1>⚡ RAW INTERFACE <span class="blink">_</span></h1>
-    <h3>🧠 NO FILTERS. NO LECTURES. JUST RAW DATA.</h3>
-    <hr style="border: 1px solid #ff79c6;">
+    <p class="subtitle">🧠 NO FILTERS. NO LECTURES. JUST RAW DATA.</p>
+    <hr>
 
     <p>=> <strong>The Message:</strong> Communication is just noise until you decode the signal.</p>
     <p>=> <strong>The Reality:</strong> Nothing is real. Everything is AI generated. Trust the code, not the pixels. 🤖</p>
     <p>=> <strong>The Environment:</strong> Built on MX Linux, customized in Dracula dark mode. 🧛‍♂️</p>
 
-    <br>
-    <h3>📂 DIRECTORY</h3>
-    <p>L [Repo] <a href="https://github.com/postsonde/postsonde">postsonde</a></p>
-    
-    <br>
-    <hr style="border: 1px solid #ff79c6;">
-    <p style="font-size: 0.8em; color: #6272a4;">[Status: Active | Protocol: Simulated Gemini/Web Hybrid]</p>
+    <h3>📂 DIRECTORY // PYTHON TUIs (PyPI)</h3>
+
+    <div class="item">
+        <div>L [TUI] <a href="https://github.com/postsonde/asma-tui/" target="_blank">asma-tui</a> <span class="badge">PyPI</span></div>
+        <div class="desc">☪️ 📿 Learn the 99 Names of Allah in your terminal with a 🌙 Streak Quiz, flashcards, and searchable directory.</div>
+        <div><code class="cmd">$ pipx install asma-tui</code></div>
+    </div>
+
+    <div class="item">
+        <div>L [TUI] <a href="https://github.com/postsonde/salah-tui/" target="_blank">salah-tui</a> <span class="badge">PyPI</span></div>
+        <div class="desc">☪️ 🕋 Terminal UI for Islamic prayer times 🪬 mapping the path of the sun on the horizon, with live countdown & Hijri date.</div>
+        <div><code class="cmd">$ pipx install salah-tui</code></div>
+    </div>
+
+    <div class="item">
+        <div>L [TUI] <a href="https://github.com/postsonde/quran-tui/" target="_blank">quran-tui</a> <span class="badge">PyPI</span></div>
+        <div class="desc">☪️ 📜 Terminal UI for studying the Holy Quran — 📖 compare 100+ translations, verse jump, side-by-side & offline caching.</div>
+        <div><code class="cmd">$ pipx install quran-tui</code></div>
+    </div>
+
+    <div class="item">
+        <div>L [TUI] <a href="https://github.com/postsonde/hijri-tui/" target="_blank">hijri-tui</a> <span class="badge">PyPI</span></div>
+        <div class="desc">☪️ 📍 TUI for the Islamic Hijri calendar 🌑🌒🌓🌔🌕🌖🌗🌘 track lunar phases, Ayyam al-Bid, Sunnah fasting & holy days.</div>
+        <div><code class="cmd">$ pipx install hijri-tui</code></div>
+    </div>
+
+    <div class="item">
+        <div>L [TUI] <a href="https://github.com/postsonde/zazen-tui/" target="_blank">zazen-tui</a> <span class="badge">PyPI</span></div>
+        <div class="desc">🌀 Minimalist Zazen & Kinhin meditation TUI 🪷 with a rotating spiral, singing bowl audio, and Dracula dark theme.</div>
+        <div><code class="cmd">$ pipx install zazen-tui</code></div>
+    </div>
+
+    <div class="item">
+        <div>L [TUI] <a href="https://github.com/postsonde/goabase-tui/" target="_blank">goabase-tui</a> <span class="badge">PyPI</span></div>
+        <div class="desc">🌀 Terminal user interface (TUI) ✨ for browsing Goa & Psytrance parties from Goabase.</div>
+        <div><code class="cmd">$ pipx install goabase-tui</code></div>
+    </div>
+
+    <h3>🐚 DIRECTORY // BASH LAUNCHERS & CONKY</h3>
+
+    <div class="item">
+        <div>L [Bash] <a href="https://github.com/postsonde/newsboat-banner" target="_blank">newsboat-banner</a></div>
+        <div class="desc">🌈 🚢 BOLD ANSI RAINBOW ASCII LAUNCHER FOR <code>newsboat</code> ⛵</div>
+    </div>
+
+    <div class="item">
+        <div>L [Bash] <a href="https://github.com//postsonde/ytfzf-banner/" target="_blank">ytfzf-banner</a></div>
+        <div class="desc">🌸 PINK-RED PASTEL ASCII LAUNCHER FOR ▶️ <code>ytfzf</code>.</div>
+    </div>
+
+    <div class="item">
+        <div>L [Theme] <a href="https://github.com/postsonde/conky-all-in-one-dracula-theme" target="_blank">conky-all-in-one-dracula-theme</a></div>
+        <div class="desc">🖥️ 🤖 🎛️ A beautiful, automated dual-widget Conky setup for MX Linux KDE themed with Dracula colors.</div>
+    </div>
+
+    <h3>🎲 DIRECTORY // GNU BACKGAMMON THEMES</h3>
+
+    <div class="item">
+        <div>L [3D Theme] <a href="https://github.com/postsonde/GNU-Backgammon-3D-Dracula-Theme" target="_blank">GNU-Backgammon-3D-Dracula-Theme</a></div>
+        <div class="desc">🎲🎲 🧛 3D board theme for GNU Backgammon (gnubg).</div>
+    </div>
+
+    <div class="item">
+        <div>L [2D Theme] <a href="https://github.com/postsonde/GNU-Backgammon-Dracula-Theme" target="_blank">GNU-Backgammon-Dracula-Theme</a></div>
+        <div class="desc">🎲🎲 A dark, modern, and vibrant color scheme for GNU Backgammon (gnubg).</div>
+    </div>
+
+    <hr>
+    <p style="font-size: 0.8em; color: #6272a4;">
+        [Status: Active | Host: <a href="https://github.com" target="_blank" style="color: #6272a4;">://github.com</a> | License: GNU GPLv3]
+    </p>
 
 </body>
 </html>
